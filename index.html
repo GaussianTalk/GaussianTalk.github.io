@@ -8,12 +8,24 @@
   <meta name="keywords" content="Talking Head, Gaussian Splatting, Few-Shot Learning, 3D Reconstruction">
   <title>GSTalk: Few-Shot Talking Head Synthesis based on Gaussian Splatting</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
   <link rel="stylesheet" href="./static/css/ppage.css">
@@ -26,17 +38,19 @@
 </head>
 <body>
 
+<!-- 标题 -->
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body" style="padding-bottom: 1rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 style="font-size:30px; width: 1100px">
-            GSTALK: FEW-SHOT TALKING HEAD SYNTHESIS BASED ON GAUSSIAN SPLATTING
+          <h1 style="font-size:30px; line-height: 1.3;">
+            GSTALK: FEW-SHOT TALKING HEAD SYNTHESIS BASED ON <br> GAUSSIAN SPLATTING
           </h1>
 
-          <div class="column has-text-centered">
+          <div class="column has-text-centered" style="margin-top: 1rem;">
             <div class="publication-links">
+              <!-- Paper Link -->
               <span class="link-block">
                 <a href="javascript:void(0)"
                    class="external-link button is-normal is-rounded is-dark">
@@ -44,6 +58,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              <!-- arXiv Link -->
               <span class="link-block">
                 <a href="javascript:void(0)"
                    class="external-link button is-normal is-rounded is-dark">
@@ -51,6 +66,7 @@
                   <span>arXiv</span>
                 </a>
               </span>
+              <!-- Code Link -->
               <span class="link-block">
                 <a href="javascript:void(0)"
                    class="external-link button is-normal is-rounded is-dark">
@@ -70,23 +86,21 @@
 <div class="container">
 
 <!-- 框架图 -->
-<section class="hero teaser">
+<section class="section" style="padding-top: 1rem; padding-bottom: 1rem;">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/method.png" alt="method" height="100%">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">GSTalk Framework</span>
-      </h2>
+    <div class="hero-body" style="padding: 0;">
+      <img src="./static/images/method.png" alt="method" style="max-width: 100%; height: auto;">
+      <h2 class="title is-3" style="text-align: center; margin-top: 0.5rem;">GSTalk Framework</h2>
     </div>
   </div>
 </section>
 
 <!-- 摘要 -->
-<section class="section">
+<section class="section" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3" style="text-align: left;">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Radiance field-based methods perform well in constructing 3D talking heads, but they require long training times and lack accurate reconstruction of facial texture details. 
@@ -103,51 +117,46 @@
 </section>
 
 <!-- Comparison 视频 -->
-<section class="hero teaser">
+<section class="section" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
-    <h2 class="subtitle has-text-centered">Comparison</h2>
+    <h2 class="title is-3" style="text-align: left;">Comparison</h2>
     <div class="content has-text-centered">
-      <div class="hero-body">
-        <video id="teaser-gstalk" controls width="90%">
-          <source src="./static/video/GSTalk.mp4" type="video/mp4">
-        </video>
-      </div>
+      <video id="teaser-gstalk" controls width="90%">
+        <source src="./static/video/GSTalk.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
 
 <!-- Self-reconstruction 视频 -->
-<section class="hero teaser">
+<section class="section" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
-    <h2 class="subtitle has-text-centered">Self-reconstruction Setting</h2>
+    <h2 class="title is-3" style="text-align: left;">Self-reconstruction Setting</h2>
     <div class="content has-text-centered">
-      <div class="hero-body">
-        <video id="teaser-self-1" controls width="90%">
-          <source src="./static/video/Self-reconstruction_1.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="hero-body" style="margin-top: 20px;">
-        <video id="teaser-self-2" controls width="90%">
-          <source src="./static/video/Self-reconstruction_2.mp4" type="video/mp4">
-        </video>
-      </div>
+      <video id="teaser-self-1" controls width="90%">
+        <source src="./static/video/Self-reconstruction_1.mp4" type="video/mp4">
+      </video>
+      <br><br>
+      <video id="teaser-self-2" controls width="90%">
+        <source src="./static/video/Self-reconstruction_2.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
 
 <!-- Cross-domain 视频 -->
-<section class="hero teaser">
+<section class="section" style="padding-top: 1rem;">
   <div class="container is-max-desktop">
-    <h2 class="subtitle has-text-centered">Cross-domain Setting</h2>
+    <h2 class="title is-3" style="text-align: left;">Cross-domain Setting</h2>
     <div class="content has-text-centered">
-      <div class="hero-body">
-        <video id="teaser-cross" controls width="90%">
-          <source src="./static/video/Cross-domain.mp4" type="video/mp4">
-        </video>
-      </div>
+      <video id="teaser-cross" controls width="90%">
+        <source src="./static/video/Cross-domain.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
+
+</div>
 
 <footer class="footer">
   <div class="container">
