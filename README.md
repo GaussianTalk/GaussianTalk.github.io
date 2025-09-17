@@ -1,6 +1,6 @@
 # GSTalk.github.io
 
-This repository contains the source code for the [GSTalk website](https://SFGHRT.github.io/GSTalk/).
+This repository contains the source code for the [GSTalk website](https://gaussiantalk.github.io/).
 
 # Website License
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
